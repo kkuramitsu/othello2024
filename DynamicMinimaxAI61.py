@@ -1,8 +1,3 @@
-!pip install -U kogi-canvas
-import math
-import random
-from kogi_canvas import play_othello
-
 BLACK = 1
 WHITE = 2
 
@@ -159,6 +154,3 @@ class DynamicMinimaxAI(object):
     def place(self, board, stone):
         _, x, y = self.minimax(board, 3, stone, True)
         return x, y
-
-# DynamicMinimaxAI を kogi-canvas の play_othello に適用
-play_othello(DynamicMinimaxAI())
